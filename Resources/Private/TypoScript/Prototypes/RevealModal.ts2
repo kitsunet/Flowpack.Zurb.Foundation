@@ -1,4 +1,4 @@
-prototype(M12.Foundation:RevealModal) < prototype(M12.Foundation:Content) {
+prototype(Flowpack.Zurb.Foundation:RevealModal) < prototype(Flowpack.Zurb.Foundation:Content) {
 	attributes.class {
 		contentcollection = 'neos-contentcollection'
 		contentcollection.@if.isBackend = ${node.context.workspace.name != 'live'}

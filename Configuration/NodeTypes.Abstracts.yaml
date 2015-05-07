@@ -3,7 +3,7 @@
 # Note: it is based on 'TYPO3.Neos:Node.label' definition
 # which takes the 'title' property as a displayed node label.
 #
-'M12.Foundation:AbstractNodeTitle':
+'Flowpack.Zurb.Foundation:AbstractNodeTitle':
   abstract: TRUE
   properties:
     title:
@@ -17,7 +17,7 @@
 #
 # Mixin with custom id / css class / inline css
 #
-'M12.Foundation:AbstractDevBase':
+'Flowpack.Zurb.Foundation:AbstractDevBase':
   abstract: TRUE
   ui:
     inspector:
@@ -86,7 +86,7 @@
             placeholder: 'e.g. custom-data-attribute=value'
 
 
-'M12.Foundation:AbstractDevCustomLook':
+'Flowpack.Zurb.Foundation:AbstractDevCustomLook':
   abstract: TRUE
   ui:
     inspector:
@@ -120,7 +120,7 @@
 # Mixin:
 # Semantic markup, choosing tag name for wrapper element
 #
-'M12.Foundation:AbstractDevCustomTag':
+'Flowpack.Zurb.Foundation:AbstractDevCustomTag':
   abstract: TRUE
   ui:
     inspector:
@@ -162,9 +162,9 @@
 # Mixin:
 # Navigation: #fragment, magellan support
 #
-'M12.Foundation:AbstractNavSailingType':
+'Flowpack.Zurb.Foundation:AbstractNavSailingType':
   superTypes:
-    - 'M12.Foundation:AbstractNavFragmentId'
+    - 'Flowpack.Zurb.Foundation:AbstractNavFragmentId'
   abstract: TRUE
   properties:
     magellanSupport:
@@ -181,7 +181,7 @@
 # which can be rendered as #fragmentId (document links)
 # or anchor <a name"fragmentId"></a>
 #
-'M12.Foundation:AbstractNavFragmentId':
+'Flowpack.Zurb.Foundation:AbstractNavFragmentId':
   abstract: TRUE
   ui:
     inspector:
@@ -213,7 +213,7 @@
 #
 # Mixin for nav content elements, to add support for fixed/sticky
 #
-'M12.Foundation:AbstractNavFixedSticky':
+'Flowpack.Zurb.Foundation:AbstractNavFixedSticky':
   abstract: TRUE
   ui:
     inspector:

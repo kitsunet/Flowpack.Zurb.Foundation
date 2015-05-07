@@ -1,4 +1,4 @@
-prototype(M12.Foundation:Container) < prototype(M12.Foundation:Content) {
+prototype(Flowpack.Zurb.Foundation:Container) < prototype(Flowpack.Zurb.Foundation:Content) {
 	node = ${node}
 	attributes.class {
 		contentcollection = 'neos-contentcollection'

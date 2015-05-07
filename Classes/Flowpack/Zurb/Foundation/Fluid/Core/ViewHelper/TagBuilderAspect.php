@@ -1,8 +1,8 @@
 <?php
-namespace M12\Foundation\Fluid\Core\ViewHelper;
+namespace Flowpack\Zurb\Foundation\Fluid\Core\ViewHelper;
 
 /*                                                                        *
- * This script belongs to the "M12.Foundation" package.                   *
+ * This script belongs to the "Flowpack.Zurb.Foundation" package.                   *
  *                                                                        *
  * It is free software; you can redistribute it and/or modify it under    *
  * the terms of the GNU General Public License, either version 3 of the   *
@@ -20,7 +20,7 @@ use TYPO3\Flow\Annotations as Flow;
  * was set to NULL or FALSE.
  *
  * @see \TYPO3\Fluid\Core\ViewHelper\TagBuilder
- * @see \M12\Foundation\TypoScript\AttributesImplementation
+ * @see \Flowpack\Zurb\Foundation\TypoScript\AttributesImplementation
  *
  * @Flow\Aspect
  */

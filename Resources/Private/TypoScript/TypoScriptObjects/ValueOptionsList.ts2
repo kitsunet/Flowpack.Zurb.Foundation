@@ -1,1 +1,1 @@
-prototype(M12.Foundation:ValueOptionsList).@class = 'M12\\Foundation\\TypoScript\\ValueOptionsListImplementation'
+prototype(Flowpack.Zurb.Foundation:ValueOptionsList).@class = 'Flowpack2\\Zurb\\Foundation\\TypoScript\\ValueOptionsListImplementation'

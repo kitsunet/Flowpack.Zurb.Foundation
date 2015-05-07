@@ -1,7 +1,7 @@
 #
 # Mixin: Font Awesome icon
 #
-'M12.Foundation:AbstractFontIcon':
+'Flowpack.Zurb.Foundation:AbstractFontIcon':
   abstract: TRUE
   ui:
     inspector:
@@ -84,10 +84,10 @@
             placeholder: 'e.g. padding-right: 5px;'
 
 
-'M12.Foundation:FontIcon':
+'Flowpack.Zurb.Foundation:FontIcon':
   superTypes:
     - 'TYPO3.Neos:Content'
-    - 'M12.Foundation:AbstractFontIcon'
+    - 'Flowpack.Zurb.Foundation:AbstractFontIcon'
   ui:
     label: 'Font Awesome icon'
     icon: 'icon-flag'

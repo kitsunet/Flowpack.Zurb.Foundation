@@ -1,8 +1,8 @@
-'M12.Foundation:BlockGrid':
+'Flowpack.Zurb.Foundation:BlockGrid':
   superTypes:
     - 'TYPO3.Neos:Content'
     - 'TYPO3.Neos:ContentCollection'
-    - 'M12.Foundation:AbstractNavSailingType'
+    - 'Flowpack.Zurb.Foundation:AbstractNavSailingType'
   ui:
     label: 'Block Grid'
     icon: 'icon-th-large'
@@ -15,4 +15,4 @@
           position: 9
   postprocessors:
     ColumnPostprocesor:
-      postprocessor: 'M12\Foundation\NodeTypePostprocessor\BlockGridNodeTypePostprocessor'
+      postprocessor: 'Flowpack\Zurb\Foundation\NodeTypePostprocessor\BlockGridNodeTypePostprocessor'

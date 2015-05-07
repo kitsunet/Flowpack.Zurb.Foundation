@@ -1,6 +1,6 @@
-prototype(M12.Foundation:DropdownAbstract) < prototype(M12.Foundation:Content) {
+prototype(Flowpack.Zurb.Foundation:DropdownAbstract) < prototype(Flowpack.Zurb.Foundation:Content) {
 	attributes {
-		# ID *have to* be set, otherwise all other Dropdowns on the same page stop working ;/ 
+		# ID *have to* be set, otherwise all other Dropdowns on the same page stop working ;/
 		id = ${q(node).property('customHtmlId') ? q(node).property('customHtmlId') : 'dd-'+q(node).property('_identifier')}
 		class {
 			base = 'f-dropdown'
@@ -13,20 +13,18 @@ prototype(M12.Foundation:DropdownAbstract) < prototype(M12.Foundation:Content) {
 }
 
 
-prototype(M12.Foundation:Dropdown) < prototype(M12.Foundation:DropdownAbstract) {
-	templatePath = 'resource://M12.Foundation/Private/Templates/NodeTypes/Dropdown.html'
+prototype(Flowpack.Zurb.Foundation:Dropdown) < prototype(Flowpack.Zurb.Foundation:DropdownAbstract) {
+	templatePath = 'resource://Flowpack.Zurb.Foundation/Private/Templates/NodeTypes/Dropdown.html'
 	sectionName = 'dropdown'
 
 	workspace = ${node.context.workspace.name}
 	text = ${String.replace(q(node).property('text'), '<ul>', '<ul' + this.attributes + '>')}
 
-	@process.wrapRemover = M12.Utils:WrapRemover
-	@process.wrapRemover.wrapperClass = 'extra-wrapper-required-by-neos-backend'
 }
 
 
-prototype(M12.Foundation:DropdownContent) < prototype(M12.Foundation:DropdownAbstract) {
-	templatePath = 'resource://M12.Foundation/Private/Templates/NodeTypes/Dropdown.html'
+prototype(Flowpack.Zurb.Foundation:DropdownContent) < prototype(Flowpack.Zurb.Foundation:DropdownAbstract) {
+	templatePath = 'resource://Flowpack.Zurb.Foundation/Private/Templates/NodeTypes/Dropdown.html'
 	sectionName = 'dropdownContent'
 
 	attributes.class {

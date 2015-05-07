@@ -23,7 +23,7 @@
 # Abstract: foundation helper classes
 #
 # -----------------------------------------------------------------------------
-'M12.Foundation:AbstractGenericHelpers':
+'Flowpack.Zurb.Foundation:AbstractGenericHelpers':
   abstract: TRUE
   ui:
     inspector:
@@ -220,11 +220,11 @@
 
 # -----------------------------------------------------------------------------
 #
-# Add M12.Foundation:GenericHelpers all properties to TYPO3.Neos:Content
+# Add Flowpack.Zurb.Foundation:GenericHelpers all properties to TYPO3.Neos:Content
 #
 # -----------------------------------------------------------------------------
 'TYPO3.Neos:Content':
   superTypes:
-    abstractGenericHelpers: 'M12.Foundation:AbstractGenericHelpers'
-    abstractDevBase:        'M12.Foundation:AbstractDevBase'
-    abstractDevCustomLook:  'M12.Foundation:AbstractDevCustomLook'
+    abstractGenericHelpers: 'Flowpack.Zurb.Foundation:AbstractGenericHelpers'
+    abstractDevBase:        'Flowpack.Zurb.Foundation:AbstractDevBase'
+    abstractDevCustomLook:  'Flowpack.Zurb.Foundation:AbstractDevCustomLook'

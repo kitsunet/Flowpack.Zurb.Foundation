@@ -1,5 +1,5 @@
 <?php
-namespace M12\Foundation\TypoScript;
+namespace Flowpack\Zurb\Foundation\TypoScript;
 
 use TYPO3\TypoScript\TypoScriptObjects\RawArrayImplementation;
 
@@ -8,7 +8,7 @@ use TYPO3\TypoScript\TypoScriptObjects\RawArrayImplementation;
  *
  * Usage:
  *
- * selectOptions = M12.Foundation:ValueOptionsList {
+ * selectOptions = Flowpack.Zurb.Foundation:ValueOptionsList {
  *      value = ${q(node).property('selectOptions')}
  * }
  *
@@ -22,9 +22,9 @@ use TYPO3\TypoScript\TypoScriptObjects\RawArrayImplementation;
  *
  * This will generate array in format value => label.
  *
- * @see M12.Foundation:FormInputSelect
+ * @see Flowpack.Zurb.Foundation:FormInputSelect
  *
- * @package M12\Foundation\TypoScript
+ * @package Flowpack\Zurb\Foundation\TypoScript
  */
 class ValueOptionsListImplementation extends RawArrayImplementation {
 

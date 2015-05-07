@@ -1,11 +1,11 @@
 #
 # Dropdown abstract
 #
-'M12.Foundation:DropdownAbstract':
+'Flowpack.Zurb.Foundation:DropdownAbstract':
   label: "${'Dropdown: ' + q(node).property('customHtmlId')}"
   abstract: TRUE
   superTypes:
-    - 'M12.Foundation:AbstractDevBase'
+    - 'Flowpack.Zurb.Foundation:AbstractDevBase'
   ui:
     inspector:
       groups:
@@ -52,10 +52,10 @@
 
 
 # Dropdown that can handle list of links only.
-'M12.Foundation:Dropdown':
+'Flowpack.Zurb.Foundation:Dropdown':
   superTypes:
     - 'TYPO3.Neos:Content'
-    - 'M12.Foundation:DropdownAbstract'
+    - 'Flowpack.Zurb.Foundation:DropdownAbstract'
   ui:
     label: 'Dropdown: Links'
     icon: 'icon-sort-down'
@@ -97,10 +97,10 @@
             autoparagraph: FALSE
 
 # Dropdown that can handle custom content.
-'M12.Foundation:DropdownContent':
+'Flowpack.Zurb.Foundation:DropdownContent':
   superTypes:
     - 'TYPO3.Neos:Content'
-    - 'M12.Foundation:DropdownAbstract'
+    - 'Flowpack.Zurb.Foundation:DropdownAbstract'
     - 'TYPO3.Neos:ContentCollection'
   ui:
     label: 'Dropdown: Content'

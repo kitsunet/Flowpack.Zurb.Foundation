@@ -1,22 +1,22 @@
-prototype(M12.Foundation:Accordion) < prototype(M12.Foundation:Content) {
+prototype(Flowpack.Zurb.Foundation:Accordion) < prototype(Flowpack.Zurb.Foundation:Content) {
 	node = ${node}
 
 	attributes.class.accordion = 'accordion'
 	attributes.data-accordion = ${q(node).property('accordionGroupName') ? q(node).property('accordionGroupName') : ''}
 
 	accordionItems = TYPO3.TypoScript:Collection {
-		collection = ${q(node).children('[instanceof M12.Foundation:AccordionItem]')}
-		itemRenderer = M12.Foundation:AccordionItem
+		collection = ${q(node).children('[instanceof Flowpack.Zurb.Foundation:AccordionItem]')}
+		itemRenderer = Flowpack.Zurb.Foundation:AccordionItem
 		itemName = 'node'
 	}
 }
 
 
-prototype(M12.Foundation:AccordionItem) < prototype(M12.Foundation:Content) {
-	templatePath = 'resource://M12.Foundation/Private/Templates/NodeTypes/Accordion.html'
+prototype(Flowpack.Zurb.Foundation:AccordionItem) < prototype(Flowpack.Zurb.Foundation:Content) {
+	templatePath = 'resource://Flowpack.Zurb.Foundation/Private/Templates/NodeTypes/Accordion.html'
 	sectionName = 'AccordionItem'
 
-	# These attributes are added to li.accordion-navigation, 
+	# These attributes are added to li.accordion-navigation,
 	# the parent element for div.content containing the accordion item content.
 	extraAttributes.class {
 		base = 'accordion-navigation'

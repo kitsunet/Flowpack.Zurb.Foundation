@@ -3,7 +3,7 @@ prototype(TYPO3.Neos:Page) {
 	@override.nodeTypeShort = ${String.toLowerCase(String.substr(q(node).property('_nodeType.name'), 1+String.lastIndexOf(q(node).property('_nodeType.name'), ':')))}
 
 	bodyTag {
-		# Add custom properties/attributes from M12.Foundation:AbstractDevBase
+		# Add custom properties/attributes from Flowpack.Zurb.Foundation:AbstractDevBase
 		attributes = TYPO3.TypoScript:Attributes {
 			class = TYPO3.TypoScript:RawArray {
 				nodeTypeShort = ${nodeTypeShort}

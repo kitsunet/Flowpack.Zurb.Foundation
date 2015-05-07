@@ -1,6 +1,6 @@
 'TYPO3.Neos:Document':
   superTypes:
-    fragmentId: 'M12.Foundation:AbstractNavFragmentId'
+    fragmentId: 'Flowpack.Zurb.Foundation:AbstractNavFragmentId'
   properties:
     title:
       ui:
@@ -24,8 +24,8 @@
 
 'TYPO3.Neos.NodeTypes:Page':
   superTypes:
-    abstractDev: 'M12.Foundation:AbstractDevBase'
-    abstractCustomLook: 'M12.Foundation:AbstractDevCustomLook'
+    abstractDev: 'Flowpack.Zurb.Foundation:AbstractDevBase'
+    abstractCustomLook: 'Flowpack.Zurb.Foundation:AbstractDevCustomLook'
   properties:
     # Custom JS code at the end of BODY
     customJsCode:
@@ -39,7 +39,7 @@
           editorOptions:
             label: 'Custom JS code'
             highlightingMode: 'text/javascript'
-    # Inherited from M12.Foundation:AbstractDevBase
+    # Inherited from Flowpack.Zurb.Foundation:AbstractDevBase
     # Replace it with CssEditor
     customCssCode:
       ui:
@@ -49,19 +49,19 @@
           editorOptions:
             label: 'Custom CSS styles'
             highlightingMode: 'text/css'
-    # Inherited from M12.Foundation:AbstractDevBase
+    # Inherited from Flowpack.Zurb.Foundation:AbstractDevBase
     customHtmlId:
       ui:
         label: 'Custom body ID'
-    # Inherited from M12.Foundation:AbstractDevBase
+    # Inherited from Flowpack.Zurb.Foundation:AbstractDevBase
     customCssClass:
       ui:
         label: 'Custom body class(es)'
-    # Inherited from M12.Foundation:AbstractDevBase
+    # Inherited from Flowpack.Zurb.Foundation:AbstractDevBase
     customLook:
       ui:
         label: 'Predefined body style'
-    # Inherited from M12.Foundation:AbstractDevBase
+    # Inherited from Flowpack.Zurb.Foundation:AbstractDevBase
     customUserAttributes:
       type: string
       ui:

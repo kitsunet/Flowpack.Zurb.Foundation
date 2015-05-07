@@ -1,5 +1,5 @@
-prototype(M12.Foundation:BlockGrid) < prototype(M12.Foundation:Content) {
-	templatePath = 'resource://M12.Foundation/Private/Templates/NodeTypes/BlockGrid.html'
+prototype(Flowpack.Zurb.Foundation:BlockGrid) < prototype(Flowpack.Zurb.Foundation:Content) {
+	templatePath = 'resource://Flowpack.Zurb.Foundation/Private/Templates/NodeTypes/BlockGrid.html'
 	node = ${node}
 	attributes.class {
 		contentcollection = 'neos-contentcollection'
@@ -15,7 +15,7 @@ prototype(M12.Foundation:BlockGrid) < prototype(M12.Foundation:Content) {
 		content = TYPO3.Neos:ContentCollectionRenderer {
 			iterationName = 'iterator'
 			itemName = 'node'
-			itemRenderer = M12.Foundation:BlockGridItem
+			itemRenderer = Flowpack.Zurb.Foundation:BlockGridItem
 		}
 
 		# Add additional wrapping, because otherwise createjs won't work (it requires elements of contentcollection to be direct children of contentcollection).
@@ -23,11 +23,9 @@ prototype(M12.Foundation:BlockGrid) < prototype(M12.Foundation:Content) {
 		@process.contentElementWrapping = TYPO3.Neos:ContentElementWrapping
 	}
 
-	@process.wrapRemover = M12.Utils:WrapRemover
-	@process.wrapRemover.wrapperClass = 'extra-wrapper-required-by-neos-backend'
 }
 
-prototype(M12.Foundation:BlockGridItem) < prototype(TYPO3.TypoScript:Tag) {
+prototype(Flowpack.Zurb.Foundation:BlockGridItem) < prototype(TYPO3.TypoScript:Tag) {
 	tagName = 'li'
 
 	content = TYPO3.Neos:ContentCase

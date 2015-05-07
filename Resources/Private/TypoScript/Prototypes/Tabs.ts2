@@ -1,5 +1,5 @@
-prototype(M12.Foundation:Tabs) < prototype(M12.Foundation:Content) {
-	templatePath = 'resource://M12.Foundation/Private/Templates/NodeTypes/Tabs.html'
+prototype(Flowpack.Zurb.Foundation:Tabs) < prototype(Flowpack.Zurb.Foundation:Content) {
+	templatePath = 'resource://Flowpack.Zurb.Foundation/Private/Templates/NodeTypes/Tabs.html'
 	sectionName = 'tabs'
 
 	tabsNavContent = TYPO3.TypoScript:Tag {
@@ -10,8 +10,8 @@ prototype(M12.Foundation:Tabs) < prototype(M12.Foundation:Content) {
 			vertical = ${q(node).property('vertical') ? ' vertical' : null}
 		}
 		content = TYPO3.TypoScript:Collection {
-			collection = ${q(node).children('[instanceof M12.Foundation:TabItem]')}
-			itemRenderer = M12.Foundation:TabNavItem
+			collection = ${q(node).children('[instanceof Flowpack.Zurb.Foundation:TabItem]')}
+			itemRenderer = Flowpack.Zurb.Foundation:TabNavItem
 			itemName = 'node'
 		}
 	}
@@ -21,17 +21,15 @@ prototype(M12.Foundation:Tabs) < prototype(M12.Foundation:Content) {
 	extraAttributes.class.vertical = ${q(node).property('vertical') ? 'vertical' : null}
 
 	tabsContent = TYPO3.TypoScript:Collection {
-		collection = ${q(node).children('[instanceof M12.Foundation:TabItem]')}
-		itemRenderer = M12.Foundation:TabContentItem
+		collection = ${q(node).children('[instanceof Flowpack.Zurb.Foundation:TabItem]')}
+		itemRenderer = Flowpack.Zurb.Foundation:TabContentItem
 		itemName = 'node'
 	}
 
-	@process.wrapRemover = M12.Utils:WrapRemover
-	@process.wrapRemover.wrapperClass = 'm12-foundation-tabs'
 }
 
-prototype(M12.Foundation:TabNavItem) < prototype(M12.Foundation:Content) {
-	templatePath = 'resource://M12.Foundation/Private/Templates/NodeTypes/Tabs.html'
+prototype(Flowpack.Zurb.Foundation:TabNavItem) < prototype(Flowpack.Zurb.Foundation:Content) {
+	templatePath = 'resource://Flowpack.Zurb.Foundation/Private/Templates/NodeTypes/Tabs.html'
 	sectionName = 'tabNavItem'
 
 	# Attributes for each LI element
@@ -48,8 +46,8 @@ prototype(M12.Foundation:TabNavItem) < prototype(M12.Foundation:Content) {
 }
 
 # Abstract render definition for a grid column
-prototype(M12.Foundation:TabContentItem) < prototype(M12.Foundation:Content) {
-	templatePath = 'resource://M12.Foundation/Private/Templates/NodeTypes/Tabs.html'
+prototype(Flowpack.Zurb.Foundation:TabContentItem) < prototype(Flowpack.Zurb.Foundation:Content) {
+	templatePath = 'resource://Flowpack.Zurb.Foundation/Private/Templates/NodeTypes/Tabs.html'
 	sectionName = 'tabContentItem'
 
 	attributes.class {

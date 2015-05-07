@@ -4,5 +4,5 @@ include: TypoScriptObjects/*
 # TYPO3 Neos objects amends
 include: Neos/*
 
-# M12.Foundation prototypes
+# Flowpack.Zurb.Foundation prototypes
 include: Prototypes/*

@@ -1,7 +1,7 @@
-'M12.Foundation:RevealModal':
+'Flowpack.Zurb.Foundation:RevealModal':
   superTypes:
     - 'TYPO3.Neos:Content'
-    - 'M12.Foundation:AbstractDevCustomTag'
+    - 'Flowpack.Zurb.Foundation:AbstractDevCustomTag'
     - 'TYPO3.Neos:ContentCollection'
   ui:
     label: 'Reveal Modal'

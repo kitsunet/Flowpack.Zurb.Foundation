@@ -1,7 +1,7 @@
 # -----------------------------------------------------------------------------
 # Tabs
 # -----------------------------------------------------------------------------
-'M12.Foundation:TabItem':
+'Flowpack.Zurb.Foundation:TabItem':
   superTypes:
     - 'TYPO3.Neos:Content'
     - 'TYPO3.Neos:ContentCollection'
@@ -33,11 +33,11 @@
           position: 20
 
 
-'M12.Foundation:Tabs':
+'Flowpack.Zurb.Foundation:Tabs':
   superTypes:
     - 'TYPO3.Neos:Content'
-    - 'M12.Foundation:AbstractDevCustomTag'
-    - 'M12.Foundation:AbstractNavSailingType'
+    - 'Flowpack.Zurb.Foundation:AbstractDevCustomTag'
+    - 'Flowpack.Zurb.Foundation:AbstractNavSailingType'
   ui:
     label: 'Tabs'
     icon: 'icon-double-angle-right'
@@ -50,13 +50,13 @@
           position: 9
   constraints:
     nodeTypes:
-      'M12.Foundation:TabItem': TRUE
+      'Flowpack.Zurb.Foundation:TabItem': TRUE
       '*': FALSE
   childNodes:
     tab1:
-      type: 'M12.Foundation:TabItem'
+      type: 'Flowpack.Zurb.Foundation:TabItem'
     tab2:
-      type: 'M12.Foundation:TabItem'
+      type: 'Flowpack.Zurb.Foundation:TabItem'
   properties:
     vertical:
       type: boolean

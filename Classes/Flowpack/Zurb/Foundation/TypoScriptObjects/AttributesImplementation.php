@@ -1,8 +1,8 @@
 <?php
-namespace M12\Foundation\TypoScriptObjects;
+namespace Flowpack\Zurb\Foundation\TypoScriptObjects;
 
 /*                                                                        *
- * This script belongs to the "M12.Foundation" package.                   *
+ * This script belongs to the "Flowpack.Zurb.Foundation" package.                   *
  *                                                                        *
  * It is free software; you can redistribute it and/or modify it under    *
  * the terms of the GNU General Public License, either version 3 of the   *
@@ -20,7 +20,7 @@ use TYPO3\Flow\Annotations as Flow;
  * Additionally, we change the behaviour slightly: evaluate() return
  * object (itself), which with __toString method ensures that
  * {attributes} inside Flow views are rendered as usually.
- * 
+ *
  * In addition, we have a possibility to call {attributes.asString}
  * or {attributes.asArray} explicitly, when needed. This might be
  * needed when you want to pass arbitrary attributes to some view helpers
@@ -74,7 +74,7 @@ class AttributesImplementation extends TypoScriptAttributesImplementation {
 					$attributeValue = trim($joinedAttributeValue);
 				}
 				$encodedAttributeValue = htmlspecialchars($attributeValue, ENT_COMPAT, 'UTF-8', FALSE);
-				
+
 				$attributes[$attributeName] = $attributeValue;
 				$renderedAttributes .= ' ' . $encodedAttributeName . '="' . $encodedAttributeValue . '"';
 			}

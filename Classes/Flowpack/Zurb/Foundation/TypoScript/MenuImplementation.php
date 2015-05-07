@@ -1,5 +1,5 @@
 <?php
-namespace M12\Foundation\TypoScript;
+namespace Flowpack\Zurb\Foundation\TypoScript;
 
 /*                                                                        *
  * This script belongs to the TYPO3 Flow package "TYPO3.Neos".            *
@@ -78,7 +78,6 @@ class MenuImplementation extends NeosMenuImplementation {
 				$item['cssClasses'] .= ($item['cssClasses']?' ':'') . 'has-dropdown';
 		}
 
-//		\TYPO3\Flow\var_dump($items);
 		return $items;
 	}
 }

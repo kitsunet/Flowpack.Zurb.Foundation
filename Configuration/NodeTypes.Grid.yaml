@@ -1,15 +1,15 @@
-# Default child node for M12.Foundation:GridColumnsX
+# Default child node for Flowpack.Zurb.Foundation:GridColumnsX
 #
 # Note: This NodeType should be only created as a child nodes
-# of M12.Foundation:GridColumnsX. Therefore it is attached to not available UI group.
+# of Flowpack.Zurb.Foundation:GridColumnsX. Therefore it is attached to not available UI group.
 #
-'M12.Foundation:Column':
+'Flowpack.Zurb.Foundation:Column':
   superTypes:
     - 'TYPO3.Neos:Content'
     - 'TYPO3.Neos:ContentCollection'
-    - 'M12.Foundation:AbstractDevCustomTag'
-    - 'M12.Foundation:AbstractNavSailingType'
-    - 'M12.Foundation:AbstractNodeTitle'
+    - 'Flowpack.Zurb.Foundation:AbstractDevCustomTag'
+    - 'Flowpack.Zurb.Foundation:AbstractNavSailingType'
+    - 'Flowpack.Zurb.Foundation:AbstractNodeTitle'
   ui:
     label: 'Grid Column'
     icon: 'icon-th-large'
@@ -21,13 +21,13 @@
           position: 6
   postprocessors:
     GridColumnPropertiesPostprocesor:
-      postprocessor: 'M12\Foundation\NodeTypePostprocessor\GridColumnNodeTypePostprocessor'
+      postprocessor: 'Flowpack\Zurb\Foundation\NodeTypePostprocessor\GridColumnNodeTypePostprocessor'
 
 
-# The last child node for M12.Foundation:GridColumnsX with extra classEndColumn property
-'M12.Foundation:ColumnEnd':
+# The last child node for Flowpack.Zurb.Foundation:GridColumnsX with extra classEndColumn property
+'Flowpack.Zurb.Foundation:ColumnEnd':
   superTypes:
-    - 'M12.Foundation:Column'
+    - 'Flowpack.Zurb.Foundation:Column'
   ui:
     label: 'Grid Column (end)'
   properties:
@@ -41,13 +41,13 @@
           position: 11
 
 
-# Abstract NodeType for all M12.Foundation:GridColumnsX
-'M12.Foundation:GridRowAbstract':
+# Abstract NodeType for all Flowpack.Zurb.Foundation:GridColumnsX
+'Flowpack.Zurb.Foundation:GridRowAbstract':
   superTypes:
     - 'TYPO3.Neos:Content'
-    - 'M12.Foundation:AbstractDevCustomTag'
-    - 'M12.Foundation:AbstractNavSailingType'
-    - 'M12.Foundation:AbstractNodeTitle'
+    - 'Flowpack.Zurb.Foundation:AbstractDevCustomTag'
+    - 'Flowpack.Zurb.Foundation:AbstractNavSailingType'
+    - 'Flowpack.Zurb.Foundation:AbstractNodeTitle'
   abstract: TRUE
   ui:
     icon: 'icon-columns'
@@ -60,7 +60,7 @@
           position: 9
   constraints:
     nodeTypes:
-      'M12.Foundation:Column': TRUE
+      'Flowpack.Zurb.Foundation:Column': TRUE
       '*': FALSE
   properties:
     gridExtraWrapper:
@@ -81,36 +81,36 @@
 #
 # Actual GridColumns elements
 #
-'M12.Foundation:GridRow1Col':
+'Flowpack.Zurb.Foundation:GridRow1Col':
   superTypes:
-    - 'M12.Foundation:GridRowAbstract'
+    - 'Flowpack.Zurb.Foundation:GridRowAbstract'
   ui:
     label: 'Grid row: 1 column'
     icon: 'icon-laptop'
   childNodes:
     col1:
-      type: 'M12.Foundation:Column'
+      type: 'Flowpack.Zurb.Foundation:Column'
 
-'M12.Foundation:GridRow2Col':
+'Flowpack.Zurb.Foundation:GridRow2Col':
   superTypes:
-    - 'M12.Foundation:GridRowAbstract'
+    - 'Flowpack.Zurb.Foundation:GridRowAbstract'
   ui:
     label: 'Grid row: 2 columns'
   childNodes:
     col1:
-      type: 'M12.Foundation:Column'
+      type: 'Flowpack.Zurb.Foundation:Column'
     col2:
-      type: 'M12.Foundation:ColumnEnd'
+      type: 'Flowpack.Zurb.Foundation:ColumnEnd'
 
-'M12.Foundation:GridRow3Col':
+'Flowpack.Zurb.Foundation:GridRow3Col':
   superTypes:
-    - 'M12.Foundation:GridRowAbstract'
+    - 'Flowpack.Zurb.Foundation:GridRowAbstract'
   ui:
     label: 'Grid row: 3 columns'
   childNodes:
     col1:
-      type: 'M12.Foundation:Column'
+      type: 'Flowpack.Zurb.Foundation:Column'
     col2:
-      type: 'M12.Foundation:Column'
+      type: 'Flowpack.Zurb.Foundation:Column'
     col3:
-      type: 'M12.Foundation:ColumnEnd'
+      type: 'Flowpack.Zurb.Foundation:ColumnEnd'

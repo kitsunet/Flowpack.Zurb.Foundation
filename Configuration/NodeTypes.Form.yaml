@@ -5,11 +5,11 @@
 # -----------------------------------------------------------------------------
 
 # <form> element.
-'M12.Foundation:Form':
+'Flowpack.Zurb.Foundation:Form':
   superTypes:
     - 'TYPO3.Neos:Content'
     - 'TYPO3.Neos:ContentCollection'
-    - 'M12.Foundation:AbstractNavSailingType'
+    - 'Flowpack.Zurb.Foundation:AbstractNavSailingType'
   ui:
     label: 'Form container'
     icon: 'icon-th-list'
@@ -45,7 +45,7 @@
                 label: 'GET'
 
 # Abstract NodeType for all form inputs (including buttons).
-'M12.Foundation:FormElementAbstract':
+'Flowpack.Zurb.Foundation:FormElementAbstract':
   abstract: TRUE
   superTypes:
     - 'TYPO3.Neos:Content'
@@ -120,7 +120,7 @@
 
 
 # Abstract for all form elements that need <label> element.
-'M12.Foundation:FormInputLabelAbstract':
+'Flowpack.Zurb.Foundation:FormInputLabelAbstract':
   abstract: TRUE
   ui:
     inspector:
@@ -198,7 +198,7 @@
 
 
 # Abstract for all form elements that need placeholder property.
-'M12.Foundation:FormInputPlaceholderAbstract':
+'Flowpack.Zurb.Foundation:FormInputPlaceholderAbstract':
   abstract: TRUE
   properties:
     inputPlaceholder:
@@ -215,7 +215,7 @@
 
 
 # Abstract for form elements that need "checked" property.
-'M12.Foundation:FormInputCheckedAbstract':
+'Flowpack.Zurb.Foundation:FormInputCheckedAbstract':
   abstract: TRUE
   properties:
     inputChecked:
@@ -228,7 +228,7 @@
 
 
 # Fieldset.
-'M12.Foundation:FormFieldset':
+'Flowpack.Zurb.Foundation:FormFieldset':
   superTypes:
     - 'TYPO3.Neos:Content'
     - 'TYPO3.Neos:ContentCollection'
@@ -260,10 +260,10 @@
 
 
 # <label> element.
-'M12.Foundation:FormLabel':
+'Flowpack.Zurb.Foundation:FormLabel':
   superTypes:
     - 'TYPO3.Neos:Content'
-    - 'M12.Foundation:FormInputLabelAbstract'
+    - 'Flowpack.Zurb.Foundation:FormInputLabelAbstract'
   ui:
     label: 'Form label'
     icon: 'icon-paperclip'
@@ -297,7 +297,7 @@
         inspector:
           group: 'na'
     # Hide custom css class / inline code - this is main LABEL element, therefore
-    # properties available in TYPO3.Neos:Content (inherited from M12.Foundation:AbstractDevBase)
+    # properties available in TYPO3.Neos:Content (inherited from Flowpack.Zurb.Foundation:AbstractDevBase)
     # should be used.
     labelCssClass:
       ui:
@@ -307,7 +307,7 @@
       ui:
         inspector:
           group: 'na'
-    # Override labels in inherited properties from M12.Foundation:AbstractDevBase
+    # Override labels in inherited properties from Flowpack.Zurb.Foundation:AbstractDevBase
     customHtmlId:
       ui:
         label: 'Label custom ID'
@@ -323,11 +323,11 @@
 
 
 # NodeType for text based <input> fields, e.g. text, password, email, number etc.
-'M12.Foundation:FormInput':
+'Flowpack.Zurb.Foundation:FormInput':
   superTypes:
-    - 'M12.Foundation:FormElementAbstract'
-    - 'M12.Foundation:FormInputLabelAbstract'
-    - 'M12.Foundation:FormInputPlaceholderAbstract'
+    - 'Flowpack.Zurb.Foundation:FormElementAbstract'
+    - 'Flowpack.Zurb.Foundation:FormInputLabelAbstract'
+    - 'Flowpack.Zurb.Foundation:FormInputPlaceholderAbstract'
   ui:
     label: 'Text field'
     icon: 'icon-pencil'
@@ -369,10 +369,10 @@
 
 
 # Pre/postfix element.
-'M12.Foundation:FormInputPrePostfix':
+'Flowpack.Zurb.Foundation:FormInputPrePostfix':
   superTypes:
     - 'TYPO3.Neos:Content'
-    - 'M12.Foundation:AbstractDevCustomTag'
+    - 'Flowpack.Zurb.Foundation:AbstractDevCustomTag'
   ui:
     label: 'Input Pre/Postfix'
     icon: 'icon-check-empty'
@@ -418,32 +418,32 @@
                 label: 'BUTTON'
 
 # NodeType for checkbox input.
-'M12.Foundation:FormInputCheckbox':
+'Flowpack.Zurb.Foundation:FormInputCheckbox':
   superTypes:
-    - 'M12.Foundation:FormElementAbstract'
-    - 'M12.Foundation:FormInputLabelAbstract'
-    - 'M12.Foundation:FormInputCheckedAbstract'
+    - 'Flowpack.Zurb.Foundation:FormElementAbstract'
+    - 'Flowpack.Zurb.Foundation:FormInputLabelAbstract'
+    - 'Flowpack.Zurb.Foundation:FormInputCheckedAbstract'
   ui:
     label: 'Checkbox field'
     icon: 'icon-check'
 
 
 # NodeType for radio input.
-'M12.Foundation:FormInputRadio':
+'Flowpack.Zurb.Foundation:FormInputRadio':
   superTypes:
-    - 'M12.Foundation:FormElementAbstract'
-    - 'M12.Foundation:FormInputLabelAbstract'
-    - 'M12.Foundation:FormInputCheckedAbstract'
+    - 'Flowpack.Zurb.Foundation:FormElementAbstract'
+    - 'Flowpack.Zurb.Foundation:FormInputLabelAbstract'
+    - 'Flowpack.Zurb.Foundation:FormInputCheckedAbstract'
   ui:
     label: 'Radio field'
     icon: 'icon-circle-blank'
 
 
 # NodeType for select.
-'M12.Foundation:FormInputSelect':
+'Flowpack.Zurb.Foundation:FormInputSelect':
   superTypes:
-    - 'M12.Foundation:FormElementAbstract'
-    - 'M12.Foundation:FormInputLabelAbstract'
+    - 'Flowpack.Zurb.Foundation:FormElementAbstract'
+    - 'Flowpack.Zurb.Foundation:FormInputLabelAbstract'
   ui:
     label: 'Select field'
     icon: 'icon-chevron-down'
@@ -464,10 +464,10 @@
 
 
 # NodeType for textarea.
-'M12.Foundation:FormInputTextarea':
+'Flowpack.Zurb.Foundation:FormInputTextarea':
   superTypes:
-    - 'M12.Foundation:FormElementAbstract'
-    - 'M12.Foundation:FormInputLabelAbstract'
+    - 'Flowpack.Zurb.Foundation:FormElementAbstract'
+    - 'Flowpack.Zurb.Foundation:FormInputLabelAbstract'
   ui:
     label: 'Textarea'
     icon: 'icon-align-left'

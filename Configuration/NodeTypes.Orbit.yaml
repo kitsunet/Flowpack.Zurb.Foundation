@@ -1,8 +1,8 @@
-'M12.Foundation:Orbit':
+'Flowpack.Zurb.Foundation:Orbit':
   superTypes:
     - 'TYPO3.Neos:Content'
     - 'TYPO3.Neos:ContentCollection'
-    - 'M12.Foundation:AbstractNodeTitle'
+    - 'Flowpack.Zurb.Foundation:AbstractNodeTitle'
   ui:
     label: 'Carousel (Orbit Slider)'
     icon: 'icon-picture'

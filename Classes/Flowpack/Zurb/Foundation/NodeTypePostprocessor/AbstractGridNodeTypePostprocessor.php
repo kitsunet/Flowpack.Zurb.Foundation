@@ -1,8 +1,8 @@
 <?php
-namespace M12\Foundation\NodeTypePostprocessor;
+namespace Flowpack\Zurb\Foundation\NodeTypePostprocessor;
 
 /*                                                                        *
- * This script belongs to the M12.Foundation package                      *
+ * This script belongs to the Flowpack.Zurb.Foundation package                      *
  *                                                                        *
  * It is free software; you can redistribute it and/or modify it under    *
  * the terms of the GNU General Public License, either version 3 of the   *
@@ -19,7 +19,7 @@ use TYPO3\TYPO3CR\NodeTypePostprocessor\NodeTypePostprocessorInterface;
 
 /**
  * This PostProcessor generates required grid properties.
- * 
+ *
  * Due to large amount of required properties it's easier to generate them here
  * instead of typing statically in NodeTypes.yaml.
  */
@@ -43,7 +43,7 @@ abstract class AbstractGridNodeTypePostprocessor implements NodeTypePostprocesso
 	protected $settings;
 
 	/**
-	 * M12.Foundation settings
+	 * Flowpack.Zurb.Foundation settings
 	 *
 	 * @param array $settings
 	 */
@@ -151,9 +151,9 @@ abstract class AbstractGridNodeTypePostprocessor implements NodeTypePostprocesso
 			throw new \TYPO3\Neos\Exception(get_called_class().'::$SETTINGS_SECTION needs to be defined.', 1396555463);
 
 		if (empty($this->settings['devices']) || !is_array($this->settings['devices']))
-			throw new \TYPO3\Neos\Exception('M12.Foundation.devices settings are missing. Please check Settings.yaml file!', 1396555463);
+			throw new \TYPO3\Neos\Exception('Flowpack.Zurb.Foundation.devices settings are missing. Please check Settings.yaml file!', 1396555463);
 
 		if (empty($this->settings[static::$SETTINGS_SECTION]) || !is_array($this->settings[static::$SETTINGS_SECTION]))
-			throw new \TYPO3\Neos\Exception('M12.Foundation.gridSettings settings are missing. Please check Settings.yaml file!', 1396555464);
+			throw new \TYPO3\Neos\Exception('Flowpack.Zurb.Foundation.gridSettings settings are missing. Please check Settings.yaml file!', 1396555464);
 	}
 }

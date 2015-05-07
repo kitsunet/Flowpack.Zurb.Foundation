@@ -1,5 +1,5 @@
-prototype(M12.Foundation:Form) < prototype(M12.Foundation:Content) {
-	templatePath = 'resource://M12.Foundation/Private/Templates/NodeTypes/Form.html'
+prototype(Flowpack.Zurb.Foundation:Form) < prototype(Flowpack.Zurb.Foundation:Content) {
+	templatePath = 'resource://Flowpack.Zurb.Foundation/Private/Templates/NodeTypes/Form.html'
 	sectionName = 'form'
 
 	actionUri = ${q(node).property('actionUri') ? q(node).property('actionUri') : '#'}
@@ -14,10 +14,10 @@ prototype(M12.Foundation:Form) < prototype(M12.Foundation:Content) {
 
 
 # Abstract prototype for all form elements.
-prototype(M12.Foundation:FormElementAbstract) < prototype(M12.Foundation:Content) {
+prototype(Flowpack.Zurb.Foundation:FormElementAbstract) < prototype(Flowpack.Zurb.Foundation:Content) {
 	@override.inputId = ${q(node).property('customHtmlId') ? q(node).property('customHtmlId') : 'field-'+q(node).property('_identifier')}
 	@override.errorState = ${q(node).property('errorState')}
-	
+
 	# Get 'name' attribute. If not provided, set to $inputId
 	inputNameAttr = ${q(node).property('inputName') ? q(node).property('inputName') : inputId}
 
@@ -40,8 +40,8 @@ prototype(M12.Foundation:FormElementAbstract) < prototype(M12.Foundation:Content
 
 
 # Fieldset with legend.
-prototype(M12.Foundation:FormFieldset) < prototype(M12.Foundation:Content) {
-	templatePath = 'resource://M12.Foundation/Private/Templates/NodeTypes/Form.html'
+prototype(Flowpack.Zurb.Foundation:FormFieldset) < prototype(Flowpack.Zurb.Foundation:Content) {
+	templatePath = 'resource://Flowpack.Zurb.Foundation/Private/Templates/NodeTypes/Form.html'
 	sectionName = 'formFieldset'
 
 	attributes.class {
@@ -54,8 +54,8 @@ prototype(M12.Foundation:FormFieldset) < prototype(M12.Foundation:Content) {
 
 
 # Label.
-prototype(M12.Foundation:FormLabel) < prototype(M12.Foundation:Content) {
-	templatePath = 'resource://M12.Foundation/Private/Templates/NodeTypes/Form.html'
+prototype(Flowpack.Zurb.Foundation:FormLabel) < prototype(Flowpack.Zurb.Foundation:Content) {
+	templatePath = 'resource://Flowpack.Zurb.Foundation/Private/Templates/NodeTypes/Form.html'
 	sectionName = 'formLabel'
 
 	attributes.class.inline = ${q(node).property('labelInlined') ? 'inline' : null}
@@ -63,56 +63,56 @@ prototype(M12.Foundation:FormLabel) < prototype(M12.Foundation:Content) {
 
 
 # Text based form input.
-prototype(M12.Foundation:FormInput) < prototype(M12.Foundation:FormElementAbstract) {
-	templatePath = 'resource://M12.Foundation/Private/Templates/NodeTypes/Form.html'
+prototype(Flowpack.Zurb.Foundation:FormInput) < prototype(Flowpack.Zurb.Foundation:FormElementAbstract) {
+	templatePath = 'resource://Flowpack.Zurb.Foundation/Private/Templates/NodeTypes/Form.html'
 	sectionName = 'formInput'
 	inputNature = 'textfield'
 }
 
 
 # Pre/postfix.
-prototype(M12.Foundation:FormInputPrePostfix) < prototype(M12.Foundation:Content) {
-	templatePath = 'resource://M12.Foundation/Private/Templates/NodeTypes/Form.html'
+prototype(Flowpack.Zurb.Foundation:FormInputPrePostfix) < prototype(Flowpack.Zurb.Foundation:Content) {
+	templatePath = 'resource://Flowpack.Zurb.Foundation/Private/Templates/NodeTypes/Form.html'
 	sectionName = 'formInputPrePostfix'
 
 	attributes.class.fixType = ${q(node).property('fixType')}
-	
+
 	# Set default tagName to SPAN
 	tagName.@process.default = ${value ? value : 'span'}
 }
 
 
 # Checkbox input.
-prototype(M12.Foundation:FormInputCheckbox) < prototype(M12.Foundation:FormElementAbstract) {
-	templatePath = 'resource://M12.Foundation/Private/Templates/NodeTypes/Form.html'
+prototype(Flowpack.Zurb.Foundation:FormInputCheckbox) < prototype(Flowpack.Zurb.Foundation:FormElementAbstract) {
+	templatePath = 'resource://Flowpack.Zurb.Foundation/Private/Templates/NodeTypes/Form.html'
 	sectionName = 'formInput-checkbox-radio'
 	inputNature = 'checkbox'
 }
 
 
 # Radio input.
-prototype(M12.Foundation:FormInputRadio) < prototype(M12.Foundation:FormElementAbstract) {
-	templatePath = 'resource://M12.Foundation/Private/Templates/NodeTypes/Form.html'
+prototype(Flowpack.Zurb.Foundation:FormInputRadio) < prototype(Flowpack.Zurb.Foundation:FormElementAbstract) {
+	templatePath = 'resource://Flowpack.Zurb.Foundation/Private/Templates/NodeTypes/Form.html'
 	sectionName = 'formInput-checkbox-radio'
 	inputNature = 'radio'
 }
 
 
 # Select input.
-prototype(M12.Foundation:FormInputSelect) < prototype(M12.Foundation:FormElementAbstract) {
-	templatePath = 'resource://M12.Foundation/Private/Templates/NodeTypes/Form.html'
+prototype(Flowpack.Zurb.Foundation:FormInputSelect) < prototype(Flowpack.Zurb.Foundation:FormElementAbstract) {
+	templatePath = 'resource://Flowpack.Zurb.Foundation/Private/Templates/NodeTypes/Form.html'
 	sectionName = 'formInput'
 	inputNature = 'select'
 
-	selectOptions = M12.Foundation:ValueOptionsList {
+	selectOptions = Flowpack.Zurb.Foundation:ValueOptionsList {
 		value = ${q(node).property('selectOptions')}
 	}
 }
 
 
 # Textarea input.
-prototype(M12.Foundation:FormInputTextarea) < prototype(M12.Foundation:FormElementAbstract) {
-	templatePath = 'resource://M12.Foundation/Private/Templates/NodeTypes/Form.html'
+prototype(Flowpack.Zurb.Foundation:FormInputTextarea) < prototype(Flowpack.Zurb.Foundation:FormElementAbstract) {
+	templatePath = 'resource://Flowpack.Zurb.Foundation/Private/Templates/NodeTypes/Form.html'
 	sectionName = 'formInput'
 	inputNature = 'textarea'
 }

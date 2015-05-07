@@ -1,8 +1,8 @@
 <?php
-namespace M12\Foundation\ViewHelpers;
+namespace Flowpack\Zurb\Foundation\ViewHelpers;
 
 /*                                                                        *
- * This script belongs to the "M12.Foundation" package.                   *
+ * This script belongs to the "Flowpack.Zurb.Foundation" package.                   *
  *                                                                        *
  * It is free software; you can redistribute it and/or modify it under    *
  * the terms of the GNU General Public License, either version 3 of the   *

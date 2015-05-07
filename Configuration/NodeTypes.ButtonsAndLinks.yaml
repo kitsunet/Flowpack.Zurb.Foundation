@@ -3,12 +3,12 @@
 # Button & Link - abstract
 #
 # -----------------------------------------------------------------------------
-'M12.Foundation:ButtonLinkAbstract':
+'Flowpack.Zurb.Foundation:ButtonLinkAbstract':
   abstract: TRUE
   superTypes:
     - 'TYPO3.Neos:Content'
-    - 'M12.Foundation:AbstractNavSailingType'
-    - 'M12.Foundation:AbstractFontIcon'
+    - 'Flowpack.Zurb.Foundation:AbstractNavSailingType'
+    - 'Flowpack.Zurb.Foundation:AbstractFontIcon'
   ui:
     icon: 'icon-sign-blank'
     group: 'interactive'
@@ -163,10 +163,10 @@
 # Link
 #
 # -----------------------------------------------------------------------------
-'M12.Foundation:Link':
+'Flowpack.Zurb.Foundation:Link':
   label: "${'Link: ' + q(node).property('label') + ' (' + node.name + ')'}"
   superTypes:
-    - 'M12.Foundation:ButtonLinkAbstract'
+    - 'Flowpack.Zurb.Foundation:ButtonLinkAbstract'
   ui:
     label: 'Link'
     icon: 'icon-link'
@@ -177,10 +177,10 @@
 # Button
 #
 # -----------------------------------------------------------------------------
-'M12.Foundation:Button':
+'Flowpack.Zurb.Foundation:Button':
   label: "${'Button: ' + q(node).property('label') + ' (' + node.name + ')'}"
   superTypes:
-    - 'M12.Foundation:ButtonLinkAbstract'
+    - 'Flowpack.Zurb.Foundation:ButtonLinkAbstract'
   ui:
     label: 'Button'
   properties:
@@ -275,7 +275,7 @@
           position: 10
 
 # Button Group (list of buttons)
-'M12.Foundation:ButtonGroup':
+'Flowpack.Zurb.Foundation:ButtonGroup':
   superTypes:
     - 'TYPO3.Neos:Content'
     - 'TYPO3.Neos:ContentCollection'
@@ -286,14 +286,14 @@
     inlineEditable: TRUE
   constraints:
     nodeTypes:
-      'M12.Foundation:Button': TRUE
+      'Flowpack.Zurb.Foundation:Button': TRUE
       '*': FALSE
   childNodes:
     btn1:
-      type: 'M12.Foundation:Button'
+      type: 'Flowpack.Zurb.Foundation:Button'
 
 # Button Bar (group of button groups)
-'M12.Foundation:ButtonBar':
+'Flowpack.Zurb.Foundation:ButtonBar':
   superTypes:
     - 'TYPO3.Neos:Content'
   ui:
@@ -303,10 +303,10 @@
     inlineEditable: TRUE
   constraints:
     nodeTypes:
-      'M12.Foundation:ButtonGroup': TRUE
+      'Flowpack.Zurb.Foundation:ButtonGroup': TRUE
       '*': FALSE
   childNodes:
     group1:
-      type: 'M12.Foundation:ButtonGroup'
+      type: 'Flowpack.Zurb.Foundation:ButtonGroup'
     group2:
-      type: 'M12.Foundation:ButtonGroup'
+      type: 'Flowpack.Zurb.Foundation:ButtonGroup'

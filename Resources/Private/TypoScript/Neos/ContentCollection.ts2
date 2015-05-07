@@ -7,9 +7,6 @@ prototype(TYPO3.Neos:ContentCollection) {
 	attributes.id = null
 	attributes.style = null
 	attributes.customUserAttributes = null
-
-	@process.wrapRemover = M12.Utils:WrapRemover
-	@process.wrapRemover.wrapperClass = 'neos-contentcollection'
 }
 
 # Don't cache nested CCs, but cache CCs inside of Content.

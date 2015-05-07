@@ -1,8 +1,8 @@
 <?php
-namespace M12\Foundation\Tests\Unit\TypoScriptObjects;
+namespace Flowpack\Zurb\Foundation\Tests\Unit\TypoScriptObjects;
 
 /*                                                                        *
- * This script belongs to the TYPO3 package "M12.Foundation".             *
+ * This script belongs to the TYPO3 package "Flowpack.Zurb.Foundation".             *
  *                                                                        *
  * It is free software; you can redistribute it and/or modify it under    *
  * the terms of the GNU General Public License, either version 3 of the   *
@@ -14,7 +14,7 @@ namespace M12\Foundation\Tests\Unit\TypoScriptObjects;
 use TYPO3\Flow\Reflection\ObjectAccess;
 use TYPO3\Flow\Tests\UnitTestCase;
 use TYPO3\TypoScript\Core\Runtime;
-use M12\Foundation\TypoScriptObjects\AttributesImplementation;
+use Flowpack\Zurb\Foundation\TypoScriptObjects\AttributesImplementation;
 
 /**
  * Test case for the TypoScript Attributes object
@@ -50,7 +50,6 @@ class AttributesImplementationTest extends UnitTestCase {
 	 * @dataProvider attributeExamples
 	 */
 	public function evaluateTests($properties, $expectedOutput, $expectedOutputAsArray) {
-//		print_r(func_get_args());
 		$path = 'attributes/test';
 		$this->mockTsRuntime->expects($this->any())->method('evaluate')->will($this->returnCallback(function($evaluatePath, $that) use ($path, $properties) {
 			$relativePath = str_replace($path . '/', '', $evaluatePath);
@@ -59,7 +58,7 @@ class AttributesImplementationTest extends UnitTestCase {
 
 		$typoScriptObjectName = 'TYPO3.TypoScript:Attributes';
 		$renderer = new AttributesImplementation($this->mockTsRuntime, $path, $typoScriptObjectName);
-		
+
 		if ($properties !== NULL) {
 			foreach ($properties as $name => $value) {
 				ObjectAccess::setProperty($renderer, $name, $value);
@@ -68,10 +67,10 @@ class AttributesImplementationTest extends UnitTestCase {
 
 		$result = $renderer->evaluate();
 
-		$this->assertInstanceOf('M12\Foundation\TypoScriptObjects\AttributesImplementation', $result);
+		$this->assertInstanceOf('Flowpack\Zurb\Foundation\TypoScriptObjects\AttributesImplementation', $result);
 		$this->assertTrue(is_string($result->getAsString()));
 		$this->assertTrue(is_array($result->getAsArray()));
-		
+
 		$this->assertEquals($expectedOutput, $result);
 		$this->assertEquals($expectedOutput, $result->getAsString());
 		$this->assertEquals($expectedOutputAsArray, $result->getAsArray());

@@ -1,10 +1,10 @@
 # -----------------------------------------------------------------------------
 # Accordion
 # -----------------------------------------------------------------------------
-'M12.Foundation:AccordionAbstract':
+'Flowpack.Zurb.Foundation:AccordionAbstract':
   abstract: TRUE
   superTypes:
-    - 'M12.Foundation:AbstractDevBase'
+    - 'Flowpack.Zurb.Foundation:AbstractDevBase'
   ui:
     inspector:
       groups:
@@ -12,10 +12,10 @@
           label: 'Accordion settings'
           position: 9
 
-'M12.Foundation:Accordion':
+'Flowpack.Zurb.Foundation:Accordion':
   superTypes:
     - 'TYPO3.Neos:Content'
-    - 'M12.Foundation:AccordionAbstract'
+    - 'Flowpack.Zurb.Foundation:AccordionAbstract'
   ui:
     label: 'Accordion'
     icon: 'icon-reorder'
@@ -23,11 +23,11 @@
     inlineEditable: TRUE
   constraints:
     nodeTypes:
-      'M12.Foundation:AccordionItem': TRUE
+      'Flowpack.Zurb.Foundation:AccordionItem': TRUE
       '*': FALSE # No children items allowed
   childNodes:
     content:
-      type: 'M12.Foundation:AccordionItem'
+      type: 'Flowpack.Zurb.Foundation:AccordionItem'
   properties:
     accordionGroupName:
       type: string
@@ -43,10 +43,10 @@
           regularExpression: '/^[a-z0-9\-]+$/i'
 
 
-'M12.Foundation:AccordionItem':
+'Flowpack.Zurb.Foundation:AccordionItem':
   superTypes:
     - 'TYPO3.Neos:Content'
-    - 'M12.Foundation:AccordionAbstract'
+    - 'Flowpack.Zurb.Foundation:AccordionAbstract'
     - 'TYPO3.Neos:ContentCollection'
   ui:
     label: 'Accordion Item'

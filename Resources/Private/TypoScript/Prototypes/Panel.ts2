@@ -1,4 +1,4 @@
-prototype(M12.Foundation:Panel) < prototype(M12.Foundation:Content) {
+prototype(Flowpack.Zurb.Foundation:Panel) < prototype(Flowpack.Zurb.Foundation:Content) {
 	attributes.class {
 		contentcollection = 'neos-contentcollection'
 		contentcollection.@if.isBackend = ${node.context.workspace.name != 'live'}

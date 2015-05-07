@@ -1,4 +1,4 @@
-'M12.Foundation:Video':
+'Flowpack.Zurb.Foundation:Video':
   superTypes:
     - 'TYPO3.Neos:Content'
   ui:

@@ -1,5 +1,5 @@
 <?php
-namespace M12\Foundation\NodeTypePostprocessor;
+namespace Flowpack\Zurb\Foundation\NodeTypePostprocessor;
 
 class GridColumnNodeTypePostprocessor extends AbstractGridNodeTypePostprocessor {
 
